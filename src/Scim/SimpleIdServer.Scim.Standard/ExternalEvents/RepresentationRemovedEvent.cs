@@ -1,0 +1,22 @@
+﻿// Copyright (c) SimpleIdServer. All rights reserved.
+// Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
+
+using Newtonsoft.Json.Linq;
+
+namespace SimpleIdServer.Scim.Standard.ExternalEvents
+{
+    public class RepresentationRemovedEvent: IntegrationEvent
+    {
+        public RepresentationRemovedEvent()
+        {
+
+        }
+
+        public RepresentationRemovedEvent(string id, int version, string resourceType, JObject representation, string token) : base(id, version, resourceType, representation) 
+        {
+            Token = token;
+        }
+
+        public string Token { get; set; }
+    }
+}

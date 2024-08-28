@@ -3,10 +3,10 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SimpleIdServer.Scim.Domains;
-using SimpleIdServer.Scim.DTOs;
 using SimpleIdServer.Scim.Extensions;
 using System;
 using System.Reflection;
+using SimpleIdServer.Scim.Standard.DTOs;
 
 namespace SimpleIdServer.Scim.Infrastructure.Converters
 {

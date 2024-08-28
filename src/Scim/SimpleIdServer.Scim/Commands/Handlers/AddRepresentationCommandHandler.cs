@@ -3,7 +3,6 @@
 using MassTransit;
 using SimpleIdServer.Scim.Domain;
 using SimpleIdServer.Scim.Domains;
-using SimpleIdServer.Scim.DTOs;
 using SimpleIdServer.Scim.Exceptions;
 using SimpleIdServer.Scim.Helpers;
 using SimpleIdServer.Scim.Infrastructure;
@@ -13,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SimpleIdServer.Scim.Standard.DTOs;
 
 namespace SimpleIdServer.Scim.Commands.Handlers
 {

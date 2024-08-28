@@ -47,7 +47,7 @@ namespace SimpleIdServer.Scim.Persistence.EF
                 return await parameter.SortBy.EvaluateOrderBy(
                     _scimDbContext,
                     queryableRepresentations,
-                    parameter.SortOrder ?? SearchSCIMRepresentationOrders.Descending,
+                    parameter.SortOrder == SearchSCIMRepresentationOrders.Unspecified ? SearchSCIMRepresentationOrders.Descending : parameter.SortOrder,
                     parameter.StartIndex,
                     parameter.Count,
                     parameter.IncludedAttributes,

@@ -14,6 +14,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleIdServer.Scim.Parser\SimpleIdServer.Scim.Parser.csproj" />
+    <ProjectReference Include="..\SimpleIdServer.Scim.Standard\SimpleIdServer.Scim.Standard.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\Global.Designer.cs">

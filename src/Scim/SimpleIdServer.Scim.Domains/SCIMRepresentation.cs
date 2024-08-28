@@ -2,7 +2,6 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 
 namespace SimpleIdServer.Scim.Domains
@@ -25,7 +24,7 @@ namespace SimpleIdServer.Scim.Domains
         public string ResourceType { get; set; }
         public int Version { get; set; }
         public string DisplayName { get; set; }
-        public string? RealmName { get; set; } = null;
+        public string RealmName { get; set; } = null;
         public DateTime Created { get; set; }
         public DateTime LastModified { get; set; }
         public ICollection<SCIMRepresentationAttribute> FlatAttributes { get; set; }
