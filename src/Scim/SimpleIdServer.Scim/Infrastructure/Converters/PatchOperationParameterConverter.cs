@@ -2,10 +2,10 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using SimpleIdServer.Scim.DTOs;
 using SimpleIdServer.Scim.Extensions;
 using System;
 using System.Reflection;
+using SimpleIdServer.Scim.Standard.DTOs;
 
 namespace SimpleIdServer.Scim.Infrastructure.Converters
 {

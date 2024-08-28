@@ -3,7 +3,6 @@
 using Microsoft.Extensions.Logging;
 using SimpleIdServer.Scim.Domain;
 using SimpleIdServer.Scim.Domains;
-using SimpleIdServer.Scim.DTOs;
 using SimpleIdServer.Scim.Exceptions;
 using SimpleIdServer.Scim.Infrastructure;
 using SimpleIdServer.Scim.Parser;
@@ -14,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using SimpleIdServer.Scim.Standard.DTOs;
 
 namespace SimpleIdServer.Scim.Queries
 {

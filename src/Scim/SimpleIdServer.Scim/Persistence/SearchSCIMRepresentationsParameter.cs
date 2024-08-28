@@ -26,7 +26,7 @@ namespace SimpleIdServer.Scim.Persistence
             StartIndex = startIndex;
             Count = count;
             SortBy = sortBy;
-            SortOrder = sortOrder;
+            SortOrder = sortOrder ?? SearchSCIMRepresentationOrders.Unspecified;
             Filter = filter;
             IncludedAttributes = includedAttributes;
             ExcludedAttributes = excludedAttributes;
@@ -38,7 +38,7 @@ namespace SimpleIdServer.Scim.Persistence
         public int StartIndex { get; set; }
         public int Count { get; set; }
         public SCIMExpression SortBy { get; set; }
-        public SearchSCIMRepresentationOrders? SortOrder { get; set; }
+        public SearchSCIMRepresentationOrders SortOrder { get; set; }
         public SCIMExpression Filter { get; set; }
         public List<string> SchemaNames { get; set; } = new List<string>();
         public string Realm { get; set; }

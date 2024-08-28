@@ -1,10 +1,9 @@
 ﻿// Copyright (c) SimpleIdServer. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
-using Microsoft.CodeAnalysis;
+
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
 using SimpleIdServer.Scim.Domains;
-using SimpleIdServer.Scim.DTOs;
 using SimpleIdServer.Scim.Exceptions;
 using SimpleIdServer.Scim.Extensions;
 using SimpleIdServer.Scim.Parser;
@@ -17,6 +16,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using SimpleIdServer.Scim.Standard.DTOs;
 
 namespace SimpleIdServer.Scim.Helpers
 {

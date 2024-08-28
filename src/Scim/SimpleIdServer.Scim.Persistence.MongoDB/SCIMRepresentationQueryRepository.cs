@@ -157,7 +157,7 @@ namespace SimpleIdServer.Scim.Persistence.MongoDB
                     .Take(parameter.Count)
             };
             var sortBy = parameter.SortBy as SCIMAttributeExpression;
-            var order = parameter.SortOrder ?? SearchSCIMRepresentationOrders.Ascending;
+            var order = parameter.SortOrder == SearchSCIMRepresentationOrders.Unspecified ? SearchSCIMRepresentationOrders.Ascending : parameter.SortOrder;
             var result = OrderByMetadataAndPaginate(sortBy,
                 representations,
                 order,
