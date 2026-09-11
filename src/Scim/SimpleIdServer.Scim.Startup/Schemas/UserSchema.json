@@ -9,10 +9,21 @@
       "multiValued": false,
       "required": true,
       "caseExact": false,
-      "mutability": "readWrite",
+      "mutability": "immutable",
       "returned": "default",
       "uniqueness": "server",
       "description": "Unique identifier for the User, typically used by the user to directly authenticate to the service provider. Each User MUST include a non-empty userName value. This identifier MUST be unique across the service provider's entire set of Users."
+    },
+    {
+      "name": "externalId",
+      "type": "string",
+      "multiValued": false,
+      "required": true,
+      "caseExact": false,
+      "mutability": "readWrite",
+      "returned": "default",
+      "uniqueness": "server",
+      "description": "An ID for the user in an external service like Entra ID."
     },
     {
       "name": "name",
@@ -323,7 +334,7 @@
           "mutability": "readWrite",
           "returned": "default",
           "uniqueness": "none",
-          "description": "A Boolean value indicating the 'primary' or preferred attribute value for this attribute, e.g., the preferred mailing address or primary email address. The primary attribute value 'true' MUST appear no more than once."
+          "description": "A Boolean value indicating the 'primary' or preferred attribute value for this attribute, e.g., the preferred phone number or primary phone number. The primary attribute value 'true' MUST appear no more than once."
         }
       ]
     },
@@ -545,6 +556,16 @@
             "other"
           ],
           "description": "A label indicating the attribute's function, e.g., 'work' or 'home'."
+        },
+        {
+          "name": "primary",
+          "type": "boolean",
+          "multiValued": false,
+          "required": false,
+          "mutability": "readWrite",
+          "returned": "default",
+          "uniqueness": "none",
+          "description": "A Boolean value indicating the 'primary' or preferred attribute value for this attribute, e.g., the preferred address or primary address.  The primary attribute value 'true' MUST appear no more than once."
         }
       ]
     },

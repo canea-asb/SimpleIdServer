@@ -27,6 +27,7 @@ public class ScimServerSetup
             }, true)
             .EnableApiKeyAuth(apiKeysConfiguration)
             .EnableSwagger()
+            .ConfigureInMemoryMassTransit()
             .ConfigureMassTransit(cb => ConfigureMessageBroker(webApplicationBuilder, cb, massTransitConf));
         if(storageConfiguration.Type == StorageTypes.MONGODB)
         {

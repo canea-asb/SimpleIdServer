@@ -11,6 +11,6 @@ namespace SimpleIdServer.Scim.Client.DTOs
         [JsonPropertyName("resourceType")]
         public string ResourceType { get; set; }
         [JsonPropertyName("version")]
-        public int Version { get; set; }
+        public string Version { get; set; }
     }
 }
