@@ -13,7 +13,7 @@ namespace SimpleIdServer.Scim.Client.Serializers
     {
         public static SearchResult<RepresentationResult> DeserializeSearchRepresentations(JsonObject jsonObj)
         {
-            var result = JsonSerializer.Deserialize<SearchResult<RepresentationResult>>(jsonObj.ToJsonString());
+            var result = jsonObj.Deserialize<SearchResult<RepresentationResult>>();
             var properties = typeof(RepresentationResult).GetProperties(BindingFlags.Public | BindingFlags.Instance);
             var visibleProperties = properties.Select(p =>
             {
@@ -35,7 +35,7 @@ namespace SimpleIdServer.Scim.Client.Serializers
 
         public static RepresentationResult DeserializeRepresentation(JsonObject jsonObj)
         {
-            var result = JsonSerializer.Deserialize<RepresentationResult>(jsonObj.ToJsonString());
+            var result = jsonObj.Deserialize<RepresentationResult>();
             var properties = typeof(RepresentationResult).GetProperties(BindingFlags.Public | BindingFlags.Instance);
             var visibleProperties = properties.Select(p =>
             {
